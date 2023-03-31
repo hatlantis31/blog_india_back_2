@@ -133,7 +133,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your Next.js frontend URL
     "http://127.0.0.1:8000/",  # Replace with your Next.js frontend URL"
-    "blog_india_back.herokuapp.com",
+    "india-heroku.herokuapp.com",
 ]
 
 MEDIA_URL = '/media/'
