@@ -143,6 +143,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your Next.js frontend URL
     "http://127.0.0.1:8000",  # Replace with your Next.js frontend URL"
     'https://india-heroku.herokuapp.com',
+    "https://mytravelblog-frontend.vercel.app",
 ]
 
 MEDIA_URL = '/media/'
