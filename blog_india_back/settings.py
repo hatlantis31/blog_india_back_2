@@ -86,8 +86,14 @@ WSGI_APPLICATION = "blog_india_back.wsgi.application"
 
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=True)
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+        },
+    }
 }
+
 
 
 # Password validation
@@ -135,8 +141,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your Next.js frontend URL
-    "http://127.0.0.1:8000/",  # Replace with your Next.js frontend URL"
-    "india-heroku.herokuapp.com",
+    "http://127.0.0.1:8000",  # Replace with your Next.js frontend URL"
+    'https://india-heroku.herokuapp.com',
 ]
 
 MEDIA_URL = '/media/'
