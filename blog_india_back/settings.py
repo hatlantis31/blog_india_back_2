@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    "india-heroku.herokuapp.com",
+    "blog-india-back.herokuapp.com",
 ]
 
 
