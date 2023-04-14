@@ -1,1 +1,1 @@
-web: gunicorn blog-india-back.wsgi --log-file -
+web: gunicorn blog_india_back.wsgi --log-file -
