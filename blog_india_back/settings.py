@@ -86,11 +86,8 @@ WSGI_APPLICATION = "blog_india_back.wsgi.application"
 
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3'))
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -138,7 +135,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your Next.js frontend URL
     "http://127.0.0.1:8000",  # Replace with your Next.js frontend URL"
-    'https://india-heroku.herokuapp.com',
+    'https://blog-india-back.herokuapp.com',
     "https://mytravelblog-frontend.vercel.app",
 ]
 
