@@ -22,14 +22,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "oqfm#2csa94osg-g&itrxzp4vk1_j"
+SECRET_KEY = '7de48f5eb8b14dba4e9906e789b4272f9397df2a7f310d68eb'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "localhost",
     "blog-travel.herokuapp.com",
+    "127.0.0.1",
+    "http://localhost:3000/",
 ]
 
 
@@ -135,12 +138,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Replace with your Next.js frontend URL
-    "http://127.0.0.1:8000",  # Replace with your Next.js frontend URL"
-    'https://blog-travel.herokuapp.com',
-    "https://mytravelblog-frontend.vercel.app",
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -151,3 +150,12 @@ STATIC_URL = '/static/'
 
 # Add the following line to tell Django where to collect static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+# deployment settings
+SECURE_HSTS_SECONDS = 3600 # You can adjust the number according to your requirement
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS= True
+SECURE_HSTS_PRELOAD = True
